@@ -14,21 +14,25 @@ form.addEventListener('submit', (e)=>{
 
 inputField.forEach(el=>{
     el.addEventListener('input', ()=>{
+        init(el)
         if(el.validity.patternMismatch){
-            el.parentNode.classList.add('error')
+            el.parentNode.classList.add('error-p')
         } else {
-            el.parentNode.classList.remove('error')}
-    
+            el.parentNode.classList.remove('error-p')}
     })
-
 })
 
 const checkInputField= ()=>{
     inputField.forEach(el=>{
         if (!el.value){
-            el.parentNode.classList.add('error')
+            el.parentNode.classList.add('error-e')
         } 
     })
+
 }
 
+const init =(el)=>{
+    el.parentNode.classList.remove('error-p')
+    el.parentNode.classList.remove('error-e')
+}
            

@@ -97,7 +97,7 @@ input{
     border:2px solid var(--primary-red);
 }
 
-.error:after{
+.error-p:after{
     position: absolute;
     content: attr(data-error);
     right: 0;
@@ -106,8 +106,18 @@ input{
     font-style: italic;
     font-size:0.5rem;
 }
+.error-e:after{
+    position: absolute;
+    content: attr(data-empty);
+    right: 0;
+    bottom:-1rem;
+    color: var(--primary-red);
+    font-style: italic;
+    font-size:0.5rem;
+}
 
-.error:before{
+.error-p:before
+.error-e:before{
     position:absolute;
     content:"";
     width:12px;
@@ -167,6 +177,10 @@ input{
     }
     .heading-text{
         font-size:2.5rem;
+    }
+    body{
+        background: url('./images/bg-intro-desktop.png');
+        background-color: var(--primary-red);
     }
 }
 

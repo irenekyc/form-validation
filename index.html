@@ -31,17 +31,17 @@
 
   <div class="my-1 form-outer">
     <form>
-      <div class="input-field " data-error="First Name cannot be empty">
-        <input type="text" name="firstName" placeholder="First Name" id="first-name" pattern=".{1,}"/>
+      <div class="input-field " data-empty="First Name cannot be empty" data-error="Name should not include special character or number">
+        <input type="text" name="firstName" placeholder="First Name" id="first-name" pattern="[A-Za-z]{1,}"/>
       </div>
-      <div class="input-field" data-error="Last Name cannot be empty">
-        <input type="text" name="lastName" placeholder="Last Name" id="last-name" pattern=".{1,}"/>
+      <div class="input-field" data-empty="Last Name cannot be empty" data-error="Name should not include special character or number">
+        <input type="text" name="lastName" placeholder="Last Name" id="last-name" pattern="[A-Za-z]{1,}"/>
       </div>
-      <div class="input-field" data-error="Looks like it is not an email">
+      <div class="input-field" data-empty="Email cannot be empty" data-error="Looks like it is not an email">
         <input type="email" name="email" placeholder="Email Address" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
       </div>
-      <div class="input-field" data-error="Password cannot be empty">
-        <input type="password" name="password" placeholder="Password" id="password" pattern=".{1,}"/>
+      <div class="input-field" data-empty="Password cannot be empty" data-error="Please include at least one uppercaseand one special character">
+        <input type="password" name="password" placeholder="Password (minimum 8 characters)" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}"/>
       </div>
         <input class="btn-submit" type="submit" value="Claim your free trial " >
         <p class="secondary tc">
